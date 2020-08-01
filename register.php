@@ -26,7 +26,7 @@
             </div>
           </div>
           <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
-            <div class="card pointer">
+            <div class="card pointer" onclick="window.location='ngoregister.php'">
               <div class="card-img-wrapper">
                 <img class="card-img-top" src="https://image.freepik.com/free-vector/charity-donation-elements-set_98292-3051.jpg" alt="Card image cap">
               </div>

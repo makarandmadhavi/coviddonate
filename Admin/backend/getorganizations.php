@@ -3,7 +3,7 @@
     function getallorganizations(){
         include 'conn.php';
         $data = array();
-        $sql = "SELECT * FROM organizations";
+        $sql = "SELECT * FROM organizations ORDER by isverified";
         $result = $conn->query($sql);
         if($result){     
             while($row = $result -> fetch_assoc()){

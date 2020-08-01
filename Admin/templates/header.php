@@ -13,11 +13,11 @@ include 'backend/onlyadmin.php';
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <title>BootKart</title>
-    <link rel="shortcut icon" type="image/png" href="../booticon.ico"/>
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="home.php">Bootkart</a>
+  <a class="navbar-brand" href="home.php">CovidDonate</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -27,15 +27,15 @@ include 'backend/onlyadmin.php';
       <li class="nav-item active">
         <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="addorganizations.php">Add organizations</a>
-      </li>
+      </li> -->
       <li class="nav-item">
-        <a class="nav-link" href="orders.php">View Orders</a>
+        <a class="nav-link" href="verifyorganizations.php">Verify Organizations</a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="managecategories.php">Manage Categories</a>
-      </li>
+      </li> -->
      
      
     </ul>

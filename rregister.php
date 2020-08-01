@@ -33,12 +33,28 @@
       <input type="email" class="form-control" id="email" name="email" placeholder="email">
     </div>
     <div class="form-group">
-    <label for="exampleFormControlSelect1">Have you tested positive for COVID-19</label>
-    <select class="form-control" name="iscovidpositive" id="iscovidpositive">
-      <option>Yes</option>
-      <option>No</option>
-    </select>
-  </div>
+      <label for="exampleFormControlSelect1">Have you tested positive for COVID-19</label>
+      <select class="form-control" name="iscovidpositive" id="iscovidpositive">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+    <div class="form-group">
+    <label for="exampleFormControlSelect1">Check all applicable cases</label>
+    <br>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input type="checkbox" id="food" name="food" class="custom-control-input">
+        <label class="custom-control-label" for="food">Food and basic needs</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input type="checkbox" id="financial" name="financial" class="custom-control-input">
+        <label class="custom-control-label" for="financial">Need financial Aid</label>
+      </div>
+      <div class="custom-control custom-checkbox custom-control-inline">
+        <input type="checkbox" id="research" name="research" class="custom-control-input">
+        <label class="custom-control-label" for="research">Education and Research</label>
+      </div>
+    </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Describe your problem</label>
       <textarea class="form-control" required id="description" name="description" rows="5"></textarea>

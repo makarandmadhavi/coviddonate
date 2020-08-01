@@ -18,6 +18,7 @@
         $organizations = getallorganizations();
     }
     //echo $_GET['category'];
+    $numbers = getcount();
 
     //echo sha1("123");
 ?>
@@ -40,7 +41,35 @@
             </p>
             <hr class="my-4">
             <p class="lead">
-                <a class="btn btn-primary btn-lg" href="register.php" role="button">Register</a>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <a class="btn btn-primary btn-lg" href="register.php" role="button">Register</a>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-white bg-info mb-3" style="max-width: 10rem; min-height:9rem;">
+                            <div class="card-header">Donors</div>
+                            <div class="card-body">
+                                <p class="card-text"><?=$numbers['donors']?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-white bg-secondary mb-3" style="max-width: 10rem; min-height:9rem;">
+                            <div class="card-header">Victims Registered</div>
+                            <div class="card-body">
+                                <p class="card-text"><?=$numbers['victims']?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-white bg-success mb-3" style="max-width: 10rem; min-height:9rem;">
+                            <div class="card-header">Organizations</div>
+                            <div class="card-body">
+                                <p class="card-text"><?=$numbers['organizations']?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
         <div class="col-sm-6">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">

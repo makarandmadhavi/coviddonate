@@ -59,6 +59,24 @@
         }
     return $data;
     }
+    function getcount(){
+        include 'conn.php';
+        $data = array();
+        $sql = "SELECT count(*) as orgs FROM organizations";
+        $result = $conn->query($sql);
+        if($result){     
+            $row = $result -> fetch_assoc();
+            $data['organizations'] = $row['orgs'];
+        }
+        $sql = "SELECT count(*) as v FROM victims";
+        $result = $conn->query($sql);
+        if($result){     
+            $row = $result -> fetch_assoc();
+            $data['victims'] = $row['v'];
+        }
+        $data['donors'] = 542;
+    return $data;
+    }
 
 
 ?>
