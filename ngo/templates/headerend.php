@@ -22,19 +22,10 @@
           <a class="nav-link" href="ngo.php">Home <span class="sr-only">(current)</span></a>
         </li>
 
-        <!-- <?php foreach($categories as $cat){ ?>  
+        
       <li class="nav-item" >
-        <a class="nav-link" href="index.php?category=<?=$cat['category']?>" > <?=$cat['category']?> </a>
+        <a class="nav-link" href="verifyvictims.php" > Verify victims </a>
       </li>
-      <?php } ?> -->
-        <!-- <li class="nav-item">
-        <a class="nav-link" href="index.php?category=TVs"> TVs </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.php?category=Laptops"> Laptops </a>
-      </li> -->
-
-
       </ul>
       
 
