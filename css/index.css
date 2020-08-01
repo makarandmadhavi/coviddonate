@@ -29,4 +29,7 @@
 .logbutton {
     margin: 5px;
 }
-  
+
+.main {
+    min-height: 60%;
+}

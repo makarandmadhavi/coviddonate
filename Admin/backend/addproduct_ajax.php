@@ -6,7 +6,7 @@
     $description = $data['description'];
     $img = $data['img'];
     $category = $data['category'];
-    $sql = "INSERT INTO products (name,price,description,img,category) VALUES('$name','$price','$description','$img','$category')";
+    $sql = "INSERT INTO organizations (name,price,description,img,category) VALUES('$name','$price','$description','$img','$category')";
     $result = $conn->query($sql);
     if($result){
         echo 'SUCCESS';

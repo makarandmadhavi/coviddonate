@@ -1,5 +1,5 @@
 <?php include 'templates/header.php'; ?>
-<?php include 'backend/getproducts.php'; ?>
+<?php include 'backend/getorganizations.php'; ?>
 <?php include 'backend/getorders.php'; ?>
 <?php include 'backend/getuserdetails.php'; 
     $orders = getallorders();

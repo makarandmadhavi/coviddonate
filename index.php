@@ -12,10 +12,10 @@
     }
     if(isset($_GET['category'])){
         //$category = $_GET['category'];
-        $products = getproductsbycategory($category);
+        $organizations = getorganizationsbycategory($category);
     }else{
-        //$category='Our Products';
-        $products = getallproducts();
+        //$category='Our organizations';
+        $organizations = getallorganizations();
     }
     //echo $_GET['category'];
 
@@ -25,8 +25,8 @@
 <div class="jumbotron">
     <div class="row">
         <div class="col-sm-6">
-            <h1 class="display-4">Hello,
-                <?=$username;?>!!</h1>
+            <h1 class="display-4">Hello
+                !!</h1>
             <p class="lead">What if you could go to your place of aid every day with a renewed sense of purpose and
                 direction,
                 confident in the knowledge that the work you do contributes to the greater good? When you work with us
@@ -40,7 +40,7 @@
             </p>
             <hr class="my-4">
             <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Register</a>
+                <a class="btn btn-primary btn-lg" href="register.php" role="button">Register</a>
         </div>
         <div class="col-sm-6">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -68,7 +68,7 @@
 <br><br>
 <div class="container main">
 
-    <?php foreach($products as $product){ ?>
+    <?php foreach($organizations as $product){ ?>
     <br><br>
     <div class="row add-box">
         <div class="col-sm-4">

@@ -28,7 +28,7 @@ include 'backend/onlyadmin.php';
         <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="addproducts.php">Add Products</a>
+        <a class="nav-link" href="addorganizations.php">Add organizations</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="orders.php">View Orders</a>

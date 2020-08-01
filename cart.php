@@ -1,5 +1,5 @@
 <?php include "templates/header.php"; 
-//include "backend/getproducts.php";
+//include "backend/getorganizations.php";
 if(isset($_SESSION['username'])){
     $username = $_SESSION['username'];
     $id = $_SESSION['id'];

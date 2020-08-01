@@ -1,6 +1,6 @@
 <?php include 'templates/header.php'; ?>
 
-<?php include "backend/getproducts.php"; 
+<?php include "backend/getorganizations.php"; 
 $id = $_GET['id'];
 $product = getsingleproduct($id);
 $categories = getcategories();

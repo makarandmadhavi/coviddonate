@@ -1,15 +1,15 @@
 <?php include 'templates/header.php'; ?>
-<?php include 'backend/getproducts.php';
+<?php include 'backend/getorganizations.php';
 
-                $products = getallproducts();
+                $organizations = getallorganizations();
 
 ?>
 
-<h1 class="text-center" >All Products</h1>
+<h1 class="text-center" >All organizations</h1>
 
 <div class="container">
     <div class="row">
-        <?php foreach($products as $product){ ?>
+        <?php foreach($organizations as $product){ ?>
         <div class="col-sm-4">
             
             <div class="card" style="">

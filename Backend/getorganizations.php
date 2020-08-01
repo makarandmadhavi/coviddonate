@@ -1,9 +1,9 @@
 <?php
     
-    function getallproducts(){
+    function getallorganizations(){
         include 'conn.php';
         $data = array();
-        $sql = "SELECT * FROM products";
+        $sql = "SELECT * FROM organizations";
         $result = $conn->query($sql);
         if($result){     
             while($row = $result -> fetch_assoc()){
@@ -15,16 +15,16 @@
 
     function getsingleproduct($id){
         include 'conn.php';
-        $sql = "SELECT * FROM products WHERE id=$id";
+        $sql = "SELECT * FROM organizations WHERE id=$id";
         $result = $conn->query($sql);
         $row=$result->fetch_assoc();
         return $row;
     }
 
-    function getproductsbycategory($category){
+    function getorganizationsbycategory($category){
         include 'conn.php';
         $data = array();
-        $sql = "SELECT * FROM products WHERE category='$category'";
+        $sql = "SELECT * FROM organizations WHERE category='$category'";
         $result = $conn->query($sql);
         if($result){     
             while($row = $result -> fetch_assoc()){

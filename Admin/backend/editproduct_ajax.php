@@ -7,7 +7,7 @@
     $description = $data['description'];
     $img = $data['img'];
     $category = $data['category'];
-    $sql = "UPDATE products SET name='$name', price='$price', description='$description', img='$img', category='$category' WHERE id='$id' ";
+    $sql = "UPDATE organizations SET name='$name', price='$price', description='$description', img='$img', category='$category' WHERE id='$id' ";
     $result = $conn->query($sql);
     if($result){
         echo 'SUCCESS';

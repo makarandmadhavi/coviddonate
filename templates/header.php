@@ -1,13 +1,13 @@
-<?php include "backend/getproducts.php"; ?>
+<?php include "backend/getorganizations.php"; ?>
 <?php
 session_start();
 
 if(isset($_GET['category'])){
   $category = $_GET['category'];
-  //$products = getproductsbycategory($category);
+  //$organizations = getorganizationsbycategory($category);
 }else{
-  $category='Our Products';
-  //$products = getallproducts();
+  $category='Our organizations';
+  //$organizations = getallorganizations();
 }
   
 ?>
