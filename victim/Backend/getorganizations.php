@@ -3,7 +3,7 @@
     function getallorganizations(){
         include 'conn.php';
         $data = array();
-        $sql = "SELECT * FROM organizations WHERE isverified=1";
+        $sql = "SELECT * FROM organizations";
         $result = $conn->query($sql);
         if($result){     
             while($row = $result -> fetch_assoc()){
@@ -73,12 +73,6 @@
         if($result){     
             $row = $result -> fetch_assoc();
             $data['victims'] = $row['v'];
-        }
-        $sql = "SELECT count(*) as v FROM victims WHERE service!=''";
-        $result = $conn->query($sql);
-        if($result){     
-            $row = $result -> fetch_assoc();
-            $data['servs'] = $row['v'];
         }
         $data['donors'] = 542;
     return $data;

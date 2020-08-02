@@ -8,7 +8,18 @@
 ?>
 
 <div class="container">
-    <h1 class="text-center">All Orders</h1>
+<br>
+<div class="row">
+<div class="col-sm-3">
+<h1 class="text-center">Verify</h1>
+</div>
+<div class="col-sm-9">
+<a href="https://ngodarpan.gov.in/index.php/home">NGO Darpan</a>
+<br>
+<a href="https://thenationaltrust.gov.in/content/registered_organization.php">National Trust</a>
+</div>
+</div>
+    
     <table class="table table-hover table-bordered">
         <thead class="thead-dark">
             <tr>
@@ -36,9 +47,15 @@
                     <?=$ngo['registration']?>
                 </td>
                 <td>
-                    <?=$ngo['isverified']?>
+                   <?php  if($ngo['isverified']){ echo 'Verified';} else { echo 'Not Verified';} ?>
                 </td>
-                <td><button class="btn btn-info btn-sm" onclick="verify('<?=$ngo['username']?>','<?=$ngo['name']?>');">Verify</button></td>
+                <td>
+                    <?php if(!$ngo['isverified']){ ?>
+                    <button class="btn btn-info btn-sm" onclick="verify('<?=$ngo['username']?>','<?=$ngo['name']?>','1');">Verify</button>
+                    <?php } else{ ?>
+                        <button class="btn btn-danger btn-sm" onclick="verify('<?=$ngo['username']?>','<?=$ngo['name']?>','0');">Un Verify</button>
+                    <?php } ?>
+                </td>
             </tr>
             <?php }  ?>
 

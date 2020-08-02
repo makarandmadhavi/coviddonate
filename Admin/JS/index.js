@@ -139,19 +139,20 @@ function removecategory(id){
 
 }
 
-function verify(username,name){
-    if(confirm("Do you wish to set "+name+" as verified NGO")){
+function verify(username,name,verify){
+    if(confirm("Do you wish to set "+name+" as verified NGO "+verify)){
         $.ajax({
             type: "POST",
             url: "backend/verify_ajax.php",
             data: {
                 //data goes here
-                username
+                username,
+                verify
             },
             success: function (data) {
                //data is returned here
                 if(data == "SUCCESS"){
-                    alert("Verified");
+                    alert("Verification updated");
                     window.location = 'verifyorganizations.php';
                 }
                 else{

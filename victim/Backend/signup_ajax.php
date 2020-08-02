@@ -2,8 +2,8 @@
     include 'conn.php';
     $data = $_POST;
     $username = $data['username'];
-    $verify = $data['verify'];
-    $sql = "UPDATE organizations SET isverified=$verify WHERE username='$username'";
+    $password = $data['password'];
+    $sql = "INSERT INTO login (username,password) VALUES('$username','$password')";
     $result = $conn->query($sql);
     if($result){
         echo 'SUCCESS';

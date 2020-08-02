@@ -22,10 +22,7 @@
                 <h5 class="card-title"><?=$product['name']?> </h5>
                 <p class="card-text"><?=$product['description']?></p>
                 <a href="<?=$product['websitelink']?>" target="_blank" class="btn btn-primary">Go to site</a>
-                <?php if(isset($_SESSION['username'])){ ?>
-                <button onclick="addtocart('<?=$product['id']?>','<?=$id?>')" class="btn btn-success">Add to
-                    cart</button>
-                <?php } ?>
+            
             </div>
         </div>
         <div class="col-sm-6">

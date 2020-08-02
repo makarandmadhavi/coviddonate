@@ -1,0 +1,35 @@
+.site-logo {
+    max-width:100%; 
+    
+}
+
+.site-logo-div {
+    width: 100%;
+}
+
+.crop {
+    overflow: hidden;
+}
+
+.carousel-inner {
+    max-height: 350px !important;
+}
+
+.add-box{
+    margin-top: 30px;
+    background-color: #fff;
+    -webkit-box-shadow: 10px 10px 41px -4px rgba(0,0,0,0.21);
+    -moz-box-shadow: 10px 10px 41px -4px rgba(0,0,0,0.21);
+    box-shadow: 10px 10px 41px -4px rgba(0,0,0,0.21);
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+  }
+
+.logbutton {
+    margin: 5px;
+}
+
+.main {
+    min-height: 60%;
+}

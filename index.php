@@ -39,12 +39,12 @@
                 people who are in the need for support. A tiny step taken by you today can transform someone's future
                 tomorrow.
             </p>
+          
+                        <a class="btn btn-primary btn-lg" href="register.php" role="button">Register</a>
+                 
             <hr class="my-4">
             <p class="lead">
                 <div class="row">
-                    <div class="col-sm-3">
-                        <a class="btn btn-primary btn-lg" href="register.php" role="button">Register</a>
-                    </div>
                     <div class="col-sm-3">
                         <div class="card text-white bg-info mb-3" style="max-width: 10rem; min-height:9rem;">
                             <div class="card-header">Donors</div>
@@ -54,10 +54,18 @@
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <div class="card text-white bg-secondary mb-3" style="max-width: 10rem; min-height:9rem;">
+                        <div class="card text-white bg-danger mb-3" style="max-width: 10rem; min-height:9rem;">
                             <div class="card-header">Victims Registered</div>
                             <div class="card-body">
                                 <p class="card-text"><?=$numbers['victims']?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-white bg-primary mb-3" style="max-width: 10rem; min-height:9rem;">
+                            <div class="card-header">Victims Being Helped</div>
+                            <div class="card-body">
+                                <p class="card-text"><?=$numbers['servs']?></p>
                             </div>
                         </div>
                     </div>
@@ -93,7 +101,7 @@
 
 </div>
 
-<h1 class="text-center">Donate to a cause!</h1>
+<h1 id="donate" class="text-center">Donate to a cause!</h1>
 <br><br>
 <div class="container main">
 
@@ -102,7 +110,8 @@
     <div class="row add-box">
         <div class="col-sm-4">
             <div class="site-logo-div">
-                <img class="site-logo" src="<?=$product['img']?>" alt="Card image cap">
+                <?php if($product['img']==""){ $product['img'] = "https://via.placeholder.com/150"; } ?>
+                <img class="site-logo" src="<?=$product['img']?>" alt="https://via.placeholder.com/150">
             </div>
         </div>
         <div class="col-sm-8">

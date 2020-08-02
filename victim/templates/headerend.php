@@ -21,19 +21,14 @@
         <li class="nav-item active">
           <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
         </li>
-
-        
+  
        <li class="nav-item">
-        <a class="nav-link" href="#donate"> Donate </a>
+        <a class="nav-link" href="#"> Edit Profile </a>
       </li>
     
-
-
       </ul>
-      
-      <a href="register.php"><button class="btn btn-info logbutton my-2 my-sm-0">Register</button></a>
 
-      <a href="login.php"><button class="btn btn-success logbutton my-2 my-sm-0">Login</button></a>
+      <a href="logout.php"><button class="btn btn-success logbutton my-2 my-sm-0">Logout</button></a>
   
     </div>
   </nav>

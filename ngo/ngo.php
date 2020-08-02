@@ -2,7 +2,16 @@
 <?php include "templates/headerend.php"; ?>
 
 <div class="container">
-	<h1>Victims database</h1>
+	<br>
+	<div class="row">
+		<div class="col-sm-6">
+		<h1>Victims database</h1> 
+		</div>
+		<div class="col-sm-6">
+		
+		</div>
+	</div>
+	
 <?php
 		$conn = mysqli_connect("localhost", "root", "", "covid");
 		// Check connection
@@ -21,8 +30,11 @@
 
 		else
 		{
+			?>
+			<button id="btnExport" class="btn btn-info" onclick="fnExcelReport('table');"> EXPORT </button><br>
+			<?php
 			echo ' <div class="table-responsive">
-		<table class="table table-bordered table-hover table-striped" >
+		<table id="table" class="table table-bordered table-hover table-striped" >
 		  <thead>
 		    <tr>
       <th scope="col">Name</th>
@@ -31,19 +43,25 @@
       <th scope="col">Contact</th>
       <th scope="col">Email</th>
       <th scope="col">Address</th>
-      <th scope="col">Username</th>
-
+	  <th scope="col">Username</th>
+	  <th scope="col">Verified</th>
+	  <th scope="col">NGO attending</th>
     </tr>
   </thead>
   <tbody> ';
 
 		// Check connection
-			$sql = "SELECT name,description,aadhar,contact,email,address,username FROM victims ORDER by description";
+			$sql = "SELECT * FROM victims ORDER by description";
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
 			// output data of each row
 			while($row = $result->fetch_assoc()) {
-				echo "<tr><td>" . $row["name"] . "</td><td>" . $row["description"]. "</td><td>" . $row["aadhar"]. "</td><td>" . $row["contact"]."</td><td>" . $row["email"]. "</td><td>" . $row["address"]."</td><td>" . $row["username"]. "</td></tr>";
+				if($row['isverified']){
+					$row['isverified']='Yes';
+				} else {
+					$row['isverified']='No';
+				}
+				echo "<tr><td>" . $row["name"] . "</td><td>" . $row["description"]. "</td><td>" . $row["aadhar"]. "</td><td>" . $row["contact"]."</td><td>" . $row["email"]. "</td><td>" . $row["address"]."</td><td>" . $row["username"]. "</td><td>".$row["isverified"]."</td><td>".$row["service"]."</td></tr>";
 			}
 			echo "</table>";
 			} else { echo "0 results"; }
@@ -57,4 +75,5 @@
 		?>
 
 </div>
+<iframe id="txtArea1" style="display:none"></iframe>
 <?php include "templates/footer.php"; ?>
